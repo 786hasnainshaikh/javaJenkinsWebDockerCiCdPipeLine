@@ -7,10 +7,10 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 COPY target/javaJenkinsWebDockerCiCdPipeLine.war /usr/local/tomcat/webapps/javaJenkinsWebDockerCiCdPipeLine.war
 
 # Change Tomcat port
-RUN sed -i 's/port="8080"/port="9090"/' /usr/local/tomcat/conf/server.xml
+RUN sed -i 's/port="8080"/port="1010"/' /usr/local/tomcat/conf/server.xml
 
 # Expose the new port
-EXPOSE 9090
+EXPOSE 1010
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
